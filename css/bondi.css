@@ -1,0 +1,231 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --green-card-before: #33d1cca8;
+    --white-color: #faebd7;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --gray-section-color: #eff7fa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-btn {
+    background-color: var(--green-color);
+    padding: 0.5rem 1.5rem;
+}
+
+.main-btn:hover {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+
+.main-title::after {
+    position: absolute;
+    content: '';
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar {
+    background-color: var(--dark-color);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: antiquewhite;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--green-color);
+}
+
+.navbar .search {
+    border-left: 1px solid var(--green-color);
+}
+
+.navbar .search svg {
+    color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+    font-size: 25px;
+    color: white;
+    border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded = "true"] {
+    box-shadow: none;
+    border-color: var(--green-color);
+}
+
+/* landing */
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+
+/* features */
+
+.features .icon-holder {
+    height: 200px;
+}
+
+.features .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.features .icon-holder .number {
+    font-size: 12rem;
+    color: var(--gray-section-color);
+}
+
+.features .icon-holder .icon {
+    color: var(--green-color);
+}
+
+.features .feat h4 {
+    color: var(--yellow-color);
+}
+
+/* portfolio */
+.portfolio {
+    background-color: var(--gray-section-color);
+}
+
+.portfolio ul .active,
+.portfolio ul li:not(.active):hover {
+    background-color: var(--green-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.portfolio ul li {
+    padding: 0.5rem 1rem;
+}
+
+.portfolio .box {
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.portfolio .box::before {
+    position: absolute;
+    content: attr(data-work);
+    background-color: var(--green-card-before);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    transform: translateX(calc(-100% - 5px));
+}
+
+.portfolio .box:hover::before {
+    transform: translateX(0);
+}
+
+/* team section */
+.team {
+    background-color: var(--gray-section-color);
+}
+
+.team h2 {
+    color: var(--yellow-color);
+}
+
+.team .box h4 {
+    background-color: var(--green-color);
+}
+
+/* project */
+.project {
+    background-color: var(--dark-color);
+}
+
+/* subscribe */
+.subscribe {
+    background-color: var(--yellow-color);
+}
+
+.subscribe input[type="text"] {
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.subscribe input[type="text"]:focus {
+    outline: none;
+}
+
+.subscribe ::placeholder {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+}
+
+.subscribe input[type="submit"] {
+    color: var(--yellow-color);
+    background-color: var(--dark-color);
+}
+
+.subscribe input[type="submit"]:hover {
+    background-color: var(--red-color);
+}
+
+/* footer  */
+.footer {
+    background-color: var(--dark-color);
+}
+
+.footer .copyright > span {
+    color: var(--green-color);
+}
+
+.footer .copyright div span {
+    color: var(--yellow-color);
+}
+
+.footer .contact ul svg {
+    width: 20px;
+    height: 20px;
+} 
+
+.footer .facebook {
+    background-color: #1877f2;
+}
+.footer .linkedin {
+    background-color: #0077b5;
+}
+.footer .youtube {
+    background-color: #ff0000;
+}
+.footer .twitter{
+    background-color: #1d1af2;
+}
+
+@media(max-width: 767px) {
+    .footer ul.social-media {
+        justify-content: center;
+    }
+}
